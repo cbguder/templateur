@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'templateur'
+
+Templateur::CLI.new.run(*ARGV)
