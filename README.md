@@ -48,7 +48,7 @@ my_special_key: my_special_secret
 
 JSON templates look like this:
 
-```json
+```
 {
   "my_special_key": {{my_special_parameter}}
 }
