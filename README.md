@@ -2,6 +2,10 @@
 
 Lightweight templates for YAML and JSON, inspired by [fly](https://github.com/concourse/fly).
 
+<a href="https://travis-ci.org/cbguder/templateur"><img src="https://travis-ci.org/cbguder/templateur.svg?branch=master"></a>
+<a href="https://codeclimate.com/github/cbguder/templateur"><img src="https://codeclimate.com/github/cbguder/templateur/badges/gpa.svg"/></a>
+<a href="https://badge.fury.io/rb/templateur"><img src="https://badge.fury.io/rb/templateur.svg"/></a>
+
 ## Installation
 
 ```
