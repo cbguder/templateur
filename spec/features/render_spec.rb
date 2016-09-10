@@ -1,8 +1,8 @@
 require 'rspec'
-require 'templateur/cli'
 require 'tempfile'
+require_relative '../helpers/run_helper'
 
-describe Templateur::CLI do
+describe 'Rendering' do
   def write_tempfile(contents)
     tmp = Tempfile.new
     tmp.write(contents)
@@ -40,8 +40,8 @@ describe Templateur::CLI do
     parameters_path = write_tempfile(parameters)
 
     expect {
-      subject.run('--yaml', template_path, parameters_path)
-    }.to output(expected_output).to_stdout
+      RunHelper.run('--yaml', template_path, parameters_path)
+    }.to output(expected_output).to_stdout_from_any_process
   end
 
   it 'renders JSON templates' do
@@ -69,7 +69,7 @@ describe Templateur::CLI do
     parameters_path = write_tempfile(parameters)
 
     expect {
-      subject.run('--json', template_path, parameters_path)
-    }.to output(expected_output).to_stdout
+      RunHelper.run('--json', template_path, parameters_path)
+    }.to output(expected_output).to_stdout_from_any_process
   end
 end

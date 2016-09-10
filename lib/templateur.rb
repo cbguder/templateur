@@ -1,2 +1,2 @@
-require 'templateur/cli'
-require 'templateur/renderer'
+require_relative 'templateur/cli'
+require_relative 'templateur/renderer'

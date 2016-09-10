@@ -1,4 +1,4 @@
-require 'templateur/renderer'
+require_relative 'renderer'
 
 module Templateur
   class CLI
@@ -7,6 +7,11 @@ module Templateur
     end
 
     def run(*args)
+      if args.count < 3
+        usage()
+        exit(1)
+      end
+
       format = args.shift[2..-1]
       template = load_file(args.shift)
       parameters = YAML.load(load_file(args.shift))
@@ -28,6 +33,10 @@ module Templateur
       f.close
 
       data
+    end
+
+    def usage()
+      STDERR.puts('USAGE: templateur (--yaml/--json) TEMPLATE PARAMETERS')
     end
   end
 end

@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'templateur'
+require_relative '../lib/templateur'
 
 Templateur::CLI.new.run(*ARGV)
