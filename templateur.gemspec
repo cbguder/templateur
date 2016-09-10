@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = 'templateur'
-  spec.version       = '0.1.0'
+  spec.version       = '0.1.1'
   spec.authors       = ['Can Berk Güder']
   spec.email         = ['cbguder@gmail.com']
   spec.summary       = 'Lightweight templates for YAML and JSON'
